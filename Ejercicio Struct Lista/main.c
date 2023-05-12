@@ -34,9 +34,23 @@ int main() {
 
     /*Test Nº5: Agregar al final el valor 12(se va a agregar al principio) e mprimir el largo de la lista*/
     agregarAlFinal(nodo, 12);
+    agregarAlFinal(nodo, 133);
     imprimir(nodo);
     printf("\n");
     int t = tamaño(nodo);
-    printf("Largo: %d", t);
+    printf("Largo: %d\n", t);
+    obtener(nodo, 2);
+
+    printf("\n---------------------------------------------------------------\n");
+
+    /*Test N°6: Creamos nodo y vamos agregando valores ordenados*/
+    Nodo *nodo2 = crearNodo(16);
+    agregarOrdenadamente(nodo2, 60);
+    agregarOrdenadamente(nodo2, 79);
+    agregarOrdenadamente(nodo2, 21);
+    agregarOrdenadamente(nodo2, -11);
+    agregarOrdenadamente(nodo2, 0);
+    agregarOrdenadamente(nodo2, -30);
+    imprimir(nodo2);
     return 0;
 }

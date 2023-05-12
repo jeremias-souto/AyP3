@@ -11,6 +11,40 @@ Nodo* crearNodo(int valor) {
     return nuevo;
 }
 
+void agregarOrdenadamente(Nodo *nodo, int valor) {
+    /*Agrega cada valor de manera ordenada (menor a mayor)*/
+    if (valor < nodo->valor) {
+        int valorAux = nodo->valor;
+        nodo->valor = valor;
+        if (nodo->proximo == NULL) {
+            Nodo *nuevo = crearNodo(valorAux);
+            nodo->proximo = nuevo;
+        } else {
+            agregarOrdenadamente(nodo->proximo, valorAux);
+        }
+    } else {
+        agregarOrdenadamente(nodo->proximo, valor);
+    }
+}
+
+void obtener(Nodo *nodo, int pos) {
+    int t = tamaño(nodo);
+    if (pos > t || pos < 1) {
+        printf("La posicion ingresada es invalida");
+    } else {
+        _obtener(nodo, pos, 1);
+    }
+}
+
+void _obtener(Nodo *nodo, int pos, int contador) {
+    if (contador == pos) {
+        printf("%d", nodo->valor);
+    } else {
+        contador = contador + 1;
+        _obtener(nodo->proximo, pos, contador);
+    }
+}
+
 void imprimir(Nodo *nodo) {
     /*Imprime por pantalla la lista*/
     if (nodo->valor != NULL) {

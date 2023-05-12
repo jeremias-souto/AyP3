@@ -28,6 +28,8 @@ void agregarOrdenadamente(Nodo *nodo, int valor) {
 }
 
 void obtener(Nodo *nodo, int pos) {
+    /*Devuelve el valor de la posicion pasada por parametro.
+    Utiliza recursividad indirecta*/
     int t = tamaño(nodo);
     if (pos > t || pos < 1) {
         printf("La posicion ingresada es invalida");

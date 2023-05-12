@@ -4,13 +4,13 @@
 
 int main() {
     
-    /*Test Nº1: Crear e imprimir por pantalla*/
+    /*Test Nº1: Creamos e imprimimos por pantalla*/
     Nodo *nodo = crearNodo(15);
     imprimir(nodo);
     
     printf("\n---------------------------------------------------------------\n");
 
-    /*Test Nº2: Agregar 2 valores, imprimir, eliminar el ultimo e imprimir*/
+    /*Test Nº2: Agregamos 2 valores, imprimimos, eliminamos el ultimo e imprimimos nuevamente*/
     agregarAlFinal(nodo, 99);
     agregarAlFinal(nodo, 34);
     imprimir(nodo);
@@ -20,19 +20,20 @@ int main() {
 
     printf("\n---------------------------------------------------------------\n");
 
-    /*Test Nº3: Agregar 1 valor en la posicion 2 e imprimir*/
+    /*Test Nº3: Agregamos el 101 en la posicion 2 e imprimimos*/
     agregarEnPosicion(nodo, 101, 2);
     imprimir(nodo);
 
     printf("\n---------------------------------------------------------------\n");
 
-    /*Test Nº4: Eliminar el valor en la posicion 1 e imprimir*/
+    /*Test Nº4: Eliminamos el valor en la posicion 1 e imprimimos*/
     eliminarEnPosicion(nodo, 1);
     imprimir(nodo);
 
     printf("\n---------------------------------------------------------------\n");
 
-    /*Test Nº5: Agregar al final el valor 12(se va a agregar al principio) e mprimir el largo de la lista*/
+    /*Test Nº5: Agregamos al final el valor 12(se va a agregar al principio), luego el 133, imprimimos el largo de la lista
+    y obtenemos el valor en la posicion 2 (101)*/
     agregarAlFinal(nodo, 12);
     agregarAlFinal(nodo, 133);
     imprimir(nodo);
@@ -43,7 +44,7 @@ int main() {
 
     printf("\n---------------------------------------------------------------\n");
 
-    /*Test N°6: Creamos nodo y vamos agregando valores ordenados*/
+    /*Test N°6: Creamos nodo y vamos agregando valores ordenadamente*/
     Nodo *nodo2 = crearNodo(16);
     agregarOrdenadamente(nodo2, 60);
     agregarOrdenadamente(nodo2, 79);
